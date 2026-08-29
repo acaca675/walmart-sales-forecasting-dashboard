@@ -244,23 +244,8 @@ The results are surfaced through a Streamlit dashboard built as a business-intel
 
 **Preview**
 
-<!--
-Add real screenshots here before publishing — a README with an actual
-dashboard image converts far better than one without. Suggested setup:
-
-  docs/screenshots/executive_overview.png
-  docs/screenshots/forecasting.png
-
-Then embed them, for example:
-
-  ![Executive Overview](docs/screenshots/executive_overview.png)
-  ![Forecasting Page](docs/screenshots/forecasting.png)
-
-Remove this comment block once the images are in place.
--->
-
-*(Dashboard screenshots to be added — see comment above for the exact syntax.)*
-
+  ![Executive Overview](data/Walmart dasboard.png)
+  
 ---
 
 ## 13. Project Architecture
