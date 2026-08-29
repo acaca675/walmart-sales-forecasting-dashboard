@@ -287,8 +287,8 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 
-python3 walmart_xgboost_pro.py   # regenerate the forecasting pipeline outputs
-streamlit run app.py             # launch the dashboard at http://localhost:8501
+python3 walmart_xgboost_pro.py   
+streamlit run app.py             
 ```
 
 ---
