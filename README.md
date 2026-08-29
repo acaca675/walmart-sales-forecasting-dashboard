@@ -244,7 +244,12 @@ The results are surfaced through a Streamlit dashboard built as a business-intel
 
 **Preview**
 
-  ![Executive Overview](data/Walmart dasboard.png)
+  <img width="1659" height="894" alt="Walmart dasboard" src="https://github.com/user-attachments/assets/67de3e5e-2e23-459f-b96e-e5bf0a8b3499" />
+  <img width="1667" height="883" alt="Tangkapan Layar 2026-08-29 pukul 1 58 08 PM" src="https://github.com/user-attachments/assets/62c8e51a-6366-43b0-a641-61e3d97dee6f" />
+  <img width="1673" height="868" alt="Tangkapan Layar 2026-08-29 pukul 1 58 25 PM" src="https://github.com/user-attachments/assets/e5e5957a-5900-4e74-bace-449528f2887d" />
+
+
+
   
 ---
 
