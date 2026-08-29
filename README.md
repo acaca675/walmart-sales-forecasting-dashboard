@@ -14,6 +14,37 @@
 
 ---
 
+## Results at a Glance
+
+| | |
+|---|---:|
+| Test-period WAPE | 8.07% |
+| Test-period R² | 0.9853 |
+| MAE improvement over naive baseline | 17.17% |
+| RMSE improvement over naive baseline | 22.25% |
+| Strongest predictor | Rolling 4-week sales average |
+| Model bias | Underprediction (median error 31.43) |
+| Forecast horizon | 12 weeks, 690.7M total projected sales |
+
+<details>
+<summary><strong>Table of Contents</strong></summary>
+
+**Part I — Business Case**
+[Executive Summary](#executive-summary) · [Business Context](#1-business-context) · [Business Problem](#2-business-problem) · [Business Questions](#3-business-questions)
+
+**Part II — Data & Methodology**
+[Dataset](#4-dataset) · [Analytical Approach](#5-analytical-approach) · [Train / Test Strategy](#6-train--test-strategy) · [Forecasting Methodology & Model Evaluation](#7-forecasting-methodology--model-evaluation)
+
+**Part III — Results & Insights**
+[What Drives the Predictions](#8-what-drives-the-predictions) · [Forecast Error Analysis](#9-forecast-error-analysis) · [Future Forecast & Assumptions](#10-future-forecast--assumptions) · [Business Implications](#11-business-implications)
+
+**Part IV — Using This Project**
+[Interactive Dashboard](#12-interactive-dashboard) · [Project Architecture](#13-project-architecture) · [Reproducibility](#14-reproducibility) · [Limitations](#15-limitations) · [Future Improvements](#16-future-improvements) · [Key Takeaways](#key-takeaways)
+
+</details>
+
+---
+
 ## Executive Summary
 
 This project analyzes Walmart's historical weekly sales data and builds a forecasting pipeline to support near-term sales planning. It combines exploratory analysis, time-series feature engineering, a naive baseline, an XGBoost regression model, forecast error diagnostics, and a 12-week forward forecast — presented through an interactive Streamlit dashboard.
@@ -27,6 +58,8 @@ Baseline Forecast → XGBoost Model → Evaluation → Error Analysis →
 ```
 
 ---
+
+# Part I — Business Case
 
 ## 1. Business Context
 
@@ -70,6 +103,8 @@ In short: descriptive analytics, predictive analytics, and business interpretati
 11. What should management actually do with the forecast?
 
 ---
+
+# Part II — Data & Methodology
 
 ## 4. Dataset
 
@@ -131,6 +166,8 @@ XGBoost was selected for its ability to capture non-linear relationships, featur
 
 ---
 
+# Part III — Results & Insights
+
 ## 8. What Drives the Predictions
 
 | Rank | Feature | Importance |
@@ -190,6 +227,8 @@ Forecasting beyond the historical window requires stated assumptions: future cal
 
 ---
 
+# Part IV — Using This Project
+
 ## 12. Interactive Dashboard
 
 The results are surfaced through a Streamlit dashboard built as a business-intelligence interface, not a static model report.
@@ -202,6 +241,25 @@ The results are surfaced through a Streamlit dashboard built as a business-intel
 | Store Performance | Store-level benchmarking and trend |
 | Dataset Explorer | Interactive view of the processed dataset and data quality |
 | About Platform | Methodology, architecture, and how to interpret the forecast |
+
+**Preview**
+
+<!--
+Add real screenshots here before publishing — a README with an actual
+dashboard image converts far better than one without. Suggested setup:
+
+  docs/screenshots/executive_overview.png
+  docs/screenshots/forecasting.png
+
+Then embed them, for example:
+
+  ![Executive Overview](docs/screenshots/executive_overview.png)
+  ![Forecasting Page](docs/screenshots/forecasting.png)
+
+Remove this comment block once the images are in place.
+-->
+
+*(Dashboard screenshots to be added — see comment above for the exact syntax.)*
 
 ---
 
@@ -244,8 +302,8 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 
-python3 walmart_xgboost_pro.py   
-streamlit run app.py             
+python3 walmart_xgboost_pro.py   # regenerate the forecasting pipeline outputs
+streamlit run app.py             # launch the dashboard at http://localhost:8501
 ```
 
 ---
